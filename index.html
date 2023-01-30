@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    </style>
+    <script>
+        function inrow(){
+            // var a=document.getElementById('tble1');
+            // var new_row=a.rows[0].cloneNode(true);
+            // var len = a.rows.length;
+            // new_row.cells[0].innerHTML = '';
+            // new_row.cells[1].innerHTML = '';
+            // new_row.cells[2].innerHTML = '';
+            //  a.appendChild( new_row );
+            var table = document.getElementById('tble1');
+            var rowCount = table.rows.length;
+            var x=table.insertRow(rowCount);
+            var c1=x.insertCell(0).innerHTML="NEW CELL1";
+            var c2=x.insertCell(1).innerHTML="NEW CELL2";
+            var c3=x.insertCell(2).innerHTML="NEW CELL3";
+        }
+        function outrow(){
+            var row=document.getElementById('tble1');
+                var i=row.rows.length-1;
+                if(i==1){
+                    
+                }
+                else{
+                     document.getElementById('tble1').deleteRow(i);
+                }
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="inrow()">Add row</button><button onclick="outrow()">delete row</button>
+    <table id="tble1" border="1">
+        <tr>
+            <th>name</th>
+            <th>salary</th>
+             <th>age</th>
+        </tr>
+        <tr>
+            <td>ravi</td>
+            <td>25000</td>
+            <td>25</td>
+        </tr>
+    </table>
+</body>
+</html>
